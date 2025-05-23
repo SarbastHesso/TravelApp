@@ -1,0 +1,19 @@
+﻿@model DetailsVM
+
+@{
+    ViewBag.Title = "Travel Details";
+}
+
+<div class="card bg-dark text-light">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Destination</h5>
+        <p class="card-text">
+            <strong>Departure:</strong> @Model.DepartureDate.ToShortDateString()<br />
+            <strong>Return:</strong> @(Model.ReturnDate?.ToShortDateString() ?? "One-way")<br />
+            <strong>Price:</strong> @Model.Price.ToString("C0")<br />
+            <strong>Description:</strong> @Model.Description
+        </p>
+        <a asp-action="Index" class="btn btn-outline-light">Back to list</a>
+    </div>
+</div>
+

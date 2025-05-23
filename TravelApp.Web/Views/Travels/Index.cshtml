@@ -1,0 +1,15 @@
+﻿@model IndexVM
+
+@{
+    ViewBag.Title = "Travels list";
+}
+
+<div class="list-group">
+    @foreach (var travel in Model.TravelsVMs)
+    {
+        <a asp-controller="Travels" asp-action="Details" asp-route-id="@travel.Id" class="list-group-item list-group-item-action">
+            <strong>@travel.Destination</strong>
+        </a>
+    }
+</div>
+
