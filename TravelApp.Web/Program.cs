@@ -11,7 +11,6 @@ namespace TravelApp.Web
             builder.Services.AddSingleton<TravelService>();
             var app = builder.Build();
             app.UseStaticFiles();
-            app.UseRouting();
             app.MapControllers();
             
             app.Run();
